@@ -1,0 +1,42 @@
+/* Стили для всего документа */
+body {
+    color: #ffffff; /* Белый цвет текста */
+    background-image: url("../images/image.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+}
+
+/* Закраска границы для таблиц */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/* установка бел цвет текста для заголовков и ячеек */
+th, td {
+    border: 1px solid #ffffff; /* Белые границы */
+    color: #ffffff;
+    padding: 8px; /* Отступ внутри ячеек */
+}
+
+/* Стили для заголовков таблиц */
+th {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Чтоб ссылки после перехода не окрашивались в синий*/
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: inherit;
+}

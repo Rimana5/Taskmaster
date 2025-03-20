@@ -1,0 +1,80 @@
+[
+    {
+        "model": "polls.barrack",
+        "pk": 1,
+        "fields": {
+            "number": "1",
+            "capacity": 100,
+            "designation": "S"
+        }
+    },
+    {
+        "model": "polls.barrack",
+        "pk": 2,
+        "fields": {
+            "number": "2",
+            "capacity": 50,
+            "designation": "O"
+        }
+    },
+    {
+        "model": "polls.weapon",
+        "pk": 1,
+        "fields": {
+            "name": "Автомат Калашникова",
+            "brand": "АК-74",
+            "serial_number": "AK-0001"
+        }
+    },
+    {
+        "model": "polls.weapon",
+        "pk": 2,
+        "fields": {
+            "name": "Снайперская винтовка Драгунова",
+            "brand": "СВД",
+            "serial_number": "SVD-0001"
+        }
+    },
+    {
+        "model": "polls.soldier",
+        "pk": 1,
+        "fields": {
+            "last_name": "Иванов",
+            "first_name": "Иван",
+            "patronymic": "Иванович",
+            "date_of_birth": "1990-05-15",
+            "service_start_date": "2020-01-10",
+            "service_end_date": "2022-01-10",
+            "barrack": 1,
+            "weapon": 1
+        }
+    },
+    {
+        "model": "polls.soldier",
+        "pk": 2,
+        "fields": {
+            "last_name": "Петров",
+            "first_name": "Петр",
+            "patronymic": "Петрович",
+            "date_of_birth": "1988-08-20",
+            "service_start_date": "2019-03-05",
+            "service_end_date": "2021-03-05",
+            "barrack": 1,
+            "weapon": 2
+        }
+    },
+    {
+        "model": "polls.soldier",
+        "pk": 3,
+        "fields": {
+            "last_name": "Сидоров",
+            "first_name": "Сидор",
+            "patronymic": "Сидорович",
+            "date_of_birth": "1992-11-30",
+            "service_start_date": "2021-07-01",
+            "service_end_date": "2023-07-01",
+            "barrack": 2,
+            "weapon": null
+        }
+    }
+]

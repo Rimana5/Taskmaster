@@ -1,0 +1,63 @@
+{% extends 'polls/base.html' %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Состав военной части</h1>
+
+<h2>Список военных</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ФИО</th>
+            <th>Казарма</th>
+            <th>Табельное оружие</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for soldier in soldiers %}
+        <tr>
+            <td>
+                <a href="{% url 'soldier_detail' soldier.pk %}">
+                    {{ soldier.last_name }} {{ soldier.first_name }} {{ soldier.patronymic }}
+                </a>
+            </td>
+            <td>{{ soldier.barrack }}</td>
+            <td>{{ soldier.weapon }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="3">Нет данных о военных.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<h2>Список казарм</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Номер казармы</th>
+            <th>Вместимость</th>
+            <th>Назначение</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for barrack in barracks %}
+        <tr>
+            <td>
+                <a href="{% url 'barrack_detail' barrack.pk %}">
+                    {{ barrack.number }}
+                </a>
+            </td>
+            <td>{{ barrack.capacity }}</td>
+            <td>{{ barrack.get_designation_display }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="3">Нет данных о казармах.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

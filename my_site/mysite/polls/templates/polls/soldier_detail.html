@@ -1,0 +1,42 @@
+{% extends 'polls/base.html' %}
+
+{% block title %}{{ soldier }}{% endblock %}
+
+{% block content %}
+<h1>Информация о военном</h1>
+<table class="table">
+    <tr>
+        <th>Фамилия</th>
+        <td>{{ soldier.last_name }}</td>
+    </tr>
+    <tr>
+        <th>Имя</th>
+        <td>{{ soldier.first_name }}</td>
+    </tr>
+    <tr>
+        <th>Отчество</th>
+        <td>{{ soldier.patronymic }}</td>
+    </tr>
+    <tr>
+        <th>Дата рождения</th>
+        <td>{{ soldier.date_of_birth }}</td>
+    </tr>
+    <tr>
+        <th>Дата начала службы</th>
+        <td>{{ soldier.service_start_date }}</td>
+    </tr>
+    <tr>
+        <th>Дата окончания службы</th>
+        <td>{{ soldier.service_end_date }}</td>
+    </tr>
+    <tr>
+        <th>Казарма</th>
+        <td>{{ soldier.barrack }}</td>
+    </tr>
+    <tr>
+        <th>Табельное оружие</th>
+        <td>{{ soldier.weapon }}</td>
+    </tr>
+</table>
+<a href="{% url 'index' %}" class="btn btn-primary">Назад на главную</a>
+{% endblock %}
